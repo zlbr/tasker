@@ -14,11 +14,6 @@ importers:
       ai:
         specifier: ^6.0.168
         version: 6.0.168(zod@4.3.6)
-      "anthropic\n":
-        specifier: |
-          link:@ai-sdk/anthropic
-        version: |
-          link:@ai-sdk/anthropic
       lucide-react:
         specifier: ^1.8.0
         version: 1.8.0(react@19.2.4)
