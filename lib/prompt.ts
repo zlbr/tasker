@@ -1,6 +1,6 @@
 export interface PromptInput {
   actionType: string;
-  signals: Record<string, string | undefined>; // mapping of calculated signals
+  signals: Record<string, boolean | undefined>;
   turns: { role: string; message: string }[];
   userPrompt: string; // latest user message
   proposedAction: string;
@@ -127,7 +127,7 @@ export const categorizeAction = (
   prompt: string,
 ): {
   actionType: string;
-  signals: Record<string, string | undefined>;
+  signals: Record<string, boolean | undefined>;
 } => {
   for (const actionType of Object.keys(actionTypes)) {
     const action = actionTypes[actionType];

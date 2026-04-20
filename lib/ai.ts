@@ -55,7 +55,7 @@ export interface RunAIResponse {
     prompt: string;
     rawOutput: string;
     actionType: string;
-    signals: Record<string, string | undefined>;
+    signals: Record<string, boolean | undefined>;
     possiblyMissing: string[];
   };
 }

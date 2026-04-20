@@ -12,6 +12,7 @@ export default function ChatView() {
 
   const [actionRes, formAction, isLoading] = useActionState(runAI, {
     error: "",
+    debug: undefined,
   });
 
   const [localTurns, setLocalTurns] = useState<

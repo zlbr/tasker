@@ -3,8 +3,9 @@ import Sidebar, { SidebarLink } from "@/components/Sidebar";
 import { testData } from "../lib/test-data";
 import { useSearchParams } from "next/navigation";
 import ChatView from "@/components/ChatView/ChatView";
+import { Suspense } from "react";
 
-export default function Home() {
+function HomeContent() {
   const search = useSearchParams();
   const currentId = search.get("id");
 
@@ -25,5 +26,13 @@ export default function Home() {
         <ChatView key={currentId || ""} />
       </div>
     </div>
+  );
+}
+
+export default function Home() {
+  return (
+    <Suspense>
+      <HomeContent />
+    </Suspense>
   );
 }
